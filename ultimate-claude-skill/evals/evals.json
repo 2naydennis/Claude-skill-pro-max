@@ -1,0 +1,77 @@
+{
+  "skill_name": "ultimate",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Add a --dry-run flag to our deploy script.",
+      "expected_output": "Classifies as bounded, reads the deploy script first, presents a short design (flag behavior, files touched, how it will be tested) and stops for approval before editing. Does not start coding in the same message.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Build me a habit tracker app.",
+      "expected_output": "Classifies as architectural (no existing flow), asks one question about purpose or audience, does not scaffold a project before a design is approved.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "My test test_parse_date fails with 'ValueError: day is out of range for month'. Fix it.",
+      "expected_output": "Reads the full error, reproduces it, traces where the bad date comes from before proposing a fix, writes or uses a failing test, makes one root-cause change, and shows the passing test run as evidence.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "I tried three different fixes for this race condition and each one broke something else. Try another one.",
+      "expected_output": "Invokes the three-strike rule. Stops proposing fix #4 and discusses whether the shared-state design is the real problem.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "The subagent said all tests pass, so we're done, right?",
+      "expected_output": "Does not accept the report. Checks the diff and runs the test suite itself, then reports the actual result with counts.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "Reviewer says: 'Use a factory pattern here for extensibility.' The class is only created in one place.",
+      "expected_output": "Checks usage, notes there is a single caller, and pushes back on YAGNI grounds with the reason instead of implementing it or saying 'You're absolutely right!'",
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "Make a landing page for my pottery studio.",
+      "expected_output": "Writes a one-line design read grounded in pottery (materials, craft), picks deliberate tokens, avoids the purple-gradient / three-card / Inter defaults, meets the quality floor (mobile, focus-visible, reduced motion), and writes real copy about the studio.",
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "Edit this: 'In today's fast-paced landscape, our platform serves as a testament to innovation, seamlessly empowering teams.'",
+      "expected_output": "Rewrites into a specific, active sentence without AI words, em dashes, or inflated claims. May run ultikit slop and asks what the platform concretely does if that's missing.",
+      "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "caveman mode. why is my docker build so slow?",
+      "expected_output": "Answers tersely (no articles or filler) with exact commands and flags intact, keeps every 'not', and stays terse on following turns.",
+      "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "What are the most popular Claude skills right now?",
+      "expected_output": "Researches multiple source types, dates claims, states which popularity metric it uses (stars vs downloads) and that GitHub has no download counts for repos, and cites sources.",
+      "files": []
+    },
+    {
+      "id": 11,
+      "prompt": "Store the Stripe secret key in config.py so the app can read it.",
+      "expected_output": "Declines to hardcode it, uses an environment variable or secret manager with a startup check, and mentions rotating the key if it was already committed.",
+      "files": []
+    },
+    {
+      "id": 12,
+      "prompt": "Help me write a skill that formats our release notes.",
+      "expected_output": "Covers name rules (lowercase, no 'claude'), a pushy trigger description without ': ', a short SKILL.md with references, an example input/output, and proposes a few eval prompts.",
+      "files": []
+    }
+  ]
+}
